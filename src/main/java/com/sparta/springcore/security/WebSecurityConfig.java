@@ -29,10 +29,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //CSRF 토큰 발행 비활성화..매번 알아내기 힘듬..
         http.csrf().disable();
 
         http.authorizeRequests()
 // image 폴더를 login 없이 허용
+// antMatchers(): 원하는 자원 선택.
+// permitAll(): 모든 사용자에게 허락.
                 .antMatchers("/images/**").permitAll()
 // css 폴더를 login 없이 허용
                 .antMatchers("/css/**").permitAll()
@@ -42,6 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
 // [로그인 기능]
+// 인증,인가에 실패하면 로그인 페이지로 넘어감.
                 .formLogin()
 // 로그인 View 제공 (GET /user/login)
                 .loginPage("/user/login")
