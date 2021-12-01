@@ -27,7 +27,7 @@ class ProductIntegrationTest {
     @Order(1)
     @DisplayName("신규 관심상품 등록")
     void test1() {
-// given
+        // given
         String title = "Apple <b>에어팟</b> 2세대 유선충전 모델 (MV7N2KH/A)";
         String imageUrl = "https://shopping-phinf.pstatic.net/main_1862208/18622086330.20200831140839.jpg";
         String linkUrl = "https://search.shopping.naver.com/gate.nhn?id=18622086330";

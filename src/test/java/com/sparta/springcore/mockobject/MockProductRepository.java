@@ -15,7 +15,7 @@ public class MockProductRepository {
     // 상품 저장
     public Product save(Product product) {
         for (Product existProduct : products) {
-// 이미 저장된 상품 -> 희망 최저가 업데이트
+            // 이미 저장된 상품 -> 희망 최저가 업데이트
             if (existProduct.getId().equals(product.getId())) {
                 int myprice = product.getMyprice();
                 existProduct.setMyprice(myprice);
@@ -23,7 +23,7 @@ public class MockProductRepository {
             }
         }
 
-// 신규 상품 -> DB 에 저장
+        // 신규 상품 -> DB 에 저장
         product.setId(productId);
         ++productId;
         products.add(product);

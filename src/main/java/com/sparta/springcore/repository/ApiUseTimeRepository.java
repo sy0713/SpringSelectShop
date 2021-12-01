@@ -1,5 +1,6 @@
 package com.sparta.springcore.repository;
 
+
 import com.sparta.springcore.model.ApiUseTime;
 import com.sparta.springcore.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

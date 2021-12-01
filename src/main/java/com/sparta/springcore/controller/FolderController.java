@@ -30,6 +30,7 @@ public class FolderController {
         return folderService.addFolders(folderNames, user);
     }
 
+    //회원이 등록한 모든 폴더 조회
     @GetMapping("api/folders")
     public List<Folder> getFolders(
             @AuthenticationPrincipal UserDetailsImpl userDetails
