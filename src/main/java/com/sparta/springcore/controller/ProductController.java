@@ -30,10 +30,8 @@ public class ProductController {
 // 로그인 되어 있는 회원 테이블의 ID
         Long userId = userDetails.getUser().getId();
 
-        Product product = productService.createProduct(requestDto, userId);
-
-// 응답 보내기
-        return product;
+        // 응답 보내기
+        return productService.createProduct(requestDto, userId);
     }
 
     // 설정 가격 변경

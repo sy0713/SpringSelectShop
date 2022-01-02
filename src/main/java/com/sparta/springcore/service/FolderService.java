@@ -42,7 +42,6 @@ public class FolderService {
                 savedFolderList.add(folder);
             }
         }
-
         return savedFolderList;
     }
 
